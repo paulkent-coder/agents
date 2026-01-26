@@ -1,0 +1,19 @@
+Here's how to install the mod to force a specific class in NLE.
+Go to envs/wrappers.py and add to it the code under the --APPENDIX--
+Go to submission_config.py.
+Where it says "from envs.wrappers import addtimelimitwrapper_fn", also have it import force_class.
+Then, set MAKE_ENV_FN in the body of the file to force_class.
+Now, you can go to envs/wrappers.py anytime and change TO_FORCE to whatever you want!
+
+--APPENDIX--
+
+TO_FORCE = "wiz"
+
+def force_class():
+    """
+    An example of how to add wrappers to the nethack_make_fn
+    Should return a gym env which wraps the nethack gym env
+    """
+    env = aicrowd_gym.make("NetHackChallenge-v0",character=TO_FORCE)
+    env = TimeLimit(env, max_episode_steps=10_000_000)
+    return env

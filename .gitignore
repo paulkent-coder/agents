@@ -1,0 +1,12 @@
+/__pycache__
+/observant_agent_backend/__pycache__
+/organized_agent_backend
+/advanced_agent
+/base.py
+/img.png
+/items.py
+/organized_agent.py
+/torchbeast_agent.py
+/manual_control.py
+/keyLookup.py
+/advanced_agent.py
