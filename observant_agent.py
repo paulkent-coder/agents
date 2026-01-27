@@ -1,5 +1,3 @@
-import numpy as np
-
 from agents.base import BatchedAgent
 from agents.observant_agent_backend.gamestate import Gamestate
 from agents.observant_agent_backend.behaviors import chooseAction
@@ -21,8 +19,9 @@ class ObservantAgent(BatchedAgent):
         Each argument is a list of the respective gym output.
         Returns an iterable of actions.
         """
-        
-        # Agent Name: Observant Dungeoneer – Takes a few quick steps to observe things before each real action
+
+        # Agent Name: Observant Dungeoneer
+        # Takes a few quick steps to observe things before each real action
         with open('readme.txt', 'w') as f:
             f.writelines("start")
         actions = []
@@ -31,12 +30,11 @@ class ObservantAgent(BatchedAgent):
                 self.state[x].reset()
             actions.append(chooseAction(self.state[x], observations[x]))
         return actions
-    
+
     def reset(self):
         for x in range(self.num_envs):
             self.state[x].reset()
-    
+
     def displayStats(self):
         for x in range(self.num_envs):
             self.state[x].displayStats()
-            
