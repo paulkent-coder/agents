@@ -230,6 +230,8 @@ class Gazetteer(StateModule):
             routeRetooled = True
             # n = "repairRoute"
 
+            # the route changed, so we need to update start and end
+            start, end = self.route[0], self.route[1]
             if len(self.route) <= 1:
                 return self.routePanic(observations, "G")
             if [heroPos[0], heroPos[1]] != self.route[0]:
