@@ -23,10 +23,10 @@ monsterNames = [
     "CARLOS",
     "CHUCK",
     "CRAIG",
-    "DAN",
+    # "DAN", # incompatible with "SHODAN"
     "DAVE",
     "ERIN",
-    "EVE",
+    # "EVE", # incompatible with "LEVEL"
     "YVES",
     "FAYTHE",
     "FRANK",
@@ -132,7 +132,7 @@ monsterNames = [
     "WINGLADE",
     "ORGANIKK",
     "WICABEL",
-    "CAROL",
+    # "CAROL", # already taken by Alice and Bob's friend Carol
     "OLDMAN",
     "CUPTAIN",
     "TITAN",
@@ -208,7 +208,7 @@ monsterNames = [
     "CYAN",
     "FORTEGREEN",
     "GRAY",
-    "GREEN",
+    # "GREEN", # incompatible with "FORTEGREEN"
     "LIME",
     "MAROON",
     "OLIVE",
@@ -355,7 +355,7 @@ monsterNames = [
     # "PANIC", # retired so it doesn't screw up me searching for actual panics
     "STUPIDITY",
     "DENIAL",
-    "ANGER",
+    # "ANGER", # incompatible with "STRANGER"
     "BARGAINING",
     "DEPRESSION",
     "ACCEPTANCE",
