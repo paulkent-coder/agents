@@ -2,7 +2,7 @@
 
 """Unit tests for names.py to detect duplicates and naming conflicts."""
 
-from .names import monsterNames, reservedNames
+from names import monsterNames, reservedNames
 
 
 def test_no_duplicates_in_monster_names():
@@ -39,29 +39,29 @@ def test_no_substring_conflicts():
         assert False, msg
 
 
-# if __name__ == "__main__":
-#     try:
-#         test_no_duplicates_in_monster_names()
-#         print("✓ No duplicates in monsterNames")
-#     except AssertionError as e:
-#         print(f"✗ {e}")
+if __name__ == "__main__":
+    try:
+        test_no_duplicates_in_monster_names()
+        print("✓ No duplicates in monsterNames")
+    except AssertionError as e:
+        print(f"✗ {e}")
 
-#     try:
-#         test_no_duplicates_in_reserved_names()
-#         print("✓ No duplicates in reservedNames")
-#     except AssertionError as e:
-#         print(f"✗ {e}")
+    try:
+        test_no_duplicates_in_reserved_names()
+        print("✓ No duplicates in reservedNames")
+    except AssertionError as e:
+        print(f"✗ {e}")
 
-#     try:
-#         test_no_overlap_between_lists()
-#         print("✓ No overlap between monsterNames and reservedNames")
-#     except AssertionError as e:
-#         print(f"✗ {e}")
+    try:
+        test_no_overlap_between_lists()
+        print("✓ No overlap between monsterNames and reservedNames")
+    except AssertionError as e:
+        print(f"✗ {e}")
 
-#     try:
-#         test_no_substring_conflicts()
-#         print("✓ No substring conflicts")
-#     except AssertionError as e:
-#         print(f"✗ {e}")
+    try:
+        test_no_substring_conflicts()
+        print("✓ No substring conflicts")
+    except AssertionError as e:
+        print(f"✗ {e}")
 
-#     print("\nAll tests passed!")
+    print("\nAll tests passed!")
