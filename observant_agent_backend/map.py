@@ -70,8 +70,11 @@ class Gazetteer(StateModule):
                 print("\x1b[0;31mAgent pathfinding failed miserably.\x1b[0;0m")
                 return
             if len(self.route) > 0:
+                x, y = self.route[-1]
+                x = int(x)
+                y = int(y)
                 print("Agent had a", len(self.route), "step path to ", end="")
-                print(self.route[-1], end=".\n")
+                print([x, y], end=".\n")
             if self.steps > 0:
                 ratio = self.dspSteps / self.steps
                 if ratio >= 0.7:
@@ -124,8 +127,11 @@ class Gazetteer(StateModule):
             print("Agent's pathfinding failed miserably.")
             return
         if len(self.route) > 0:
+            x, y = self.route[-1]
+            x = int(x)
+            y = int(y)
             print("Agent had a", len(self.route), "step path to ", end="")
-            print(self.route[-1], end=".\n")
+            print([x, y], end=".\n")
 
     def displayStats(self):
         bad = self.stats_badRuns
