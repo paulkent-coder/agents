@@ -2,7 +2,7 @@
 
 """Unit tests for names.py to detect duplicates and naming conflicts."""
 
-from names import monsterNames, reservedNames
+from .names import monsterNames, reservedNames
 
 
 def test_no_duplicates_in_monster_names():
