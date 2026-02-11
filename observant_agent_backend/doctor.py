@@ -125,7 +125,7 @@ class StatusChecker(StateModule):
         # inhibits your ability to fight, or something that will probably
         # kill you by the time you're done.
 
-        # Other problems go in fixMinorProblems above.
+        # Other problems go in fixMinorProblems below.
         inventory = self.state.get("inventory")
         queue = self.state.get("queue")
         hp, max = readHeroHealth(observations)

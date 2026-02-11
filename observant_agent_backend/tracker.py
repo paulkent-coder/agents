@@ -161,7 +161,7 @@ class MonsterTracker(StateModule):
                         break
                 if i == -1:
                     # FIXME: If this ever happens, fail more gracefully
-                    print("Error code 6996 – shopkeeper name handling", end="")
+                    print("Error code 6996: shopkeeper name handling", end="")
                     print(" in tracker.py failed miserably")
                     exit(1)
                 name = desc[i:]

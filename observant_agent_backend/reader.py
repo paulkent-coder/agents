@@ -61,7 +61,7 @@ class MessageSecretary(StateModule):
         pass
 
     def figureOutMessage(self, observations):
-        message = readMessage(observations)	
+        message = readMessage(observations)
 
         if message == "":
             # no message

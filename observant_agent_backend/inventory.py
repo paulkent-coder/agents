@@ -137,7 +137,7 @@ class ItemManager(StateModule):
         # spend a turn. This is an observation-type function – it's not
         # supposed to do anything that causes time to elapse. I don't know
         # whether this agent is robust against a turn passing unexpectedly.
-        # I wouldn't count on it – the bot probably will get desynced in some\
+        # I wouldn't count on it – the bot probably will get desynced in some
         # way.
 
         # So, hopefully, we can count on being able to keep track of
